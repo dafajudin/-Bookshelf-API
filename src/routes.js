@@ -1,43 +1,43 @@
 // routes.js
 const {
-    addItemHandler,
-    getAllItemsHandler,
-    getItemByIdHandler,
-    editItemByIdHandler,
-    deleteItemByIdHandler,
-  } = require('./handler');
+    addBookHandler,
+    getAllBooksHandler,
+    getBookByIdHandler,
+    editBookByIdHandler,
+    deleteBookByIdHandler,
+} = require('./handler');
 
-  const routes = [
+const routes = [
     {
-      method: 'POST',
-      path: '/books',
-      handler: addItemHandler,
+        method: 'POST',
+        path: '/books',
+        handler: addBookHandler,
     },
     {
-      method: 'GET',
-      path: '/books',
-      handler: getAllItemsHandler,
+        method: 'GET',
+        path: '/books',
+        handler: getAllBooksHandler,
     },
     {
-      method: 'GET',
-      path: '/books/{bookId}',
-      handler: getItemByIdHandler,
+        method: 'GET',
+        path: '/books/{bookId}',
+        handler: getBookByIdHandler,
     },
     {
-      method: 'PUT',
-      path: '/books/{bookId}',
-      handler: editItemByIdHandler,
+        method: 'PUT',
+        path: '/books/{bookId}',
+        handler: editBookByIdHandler,
     },
     {
       method: 'DELETE',
-      path: '/books/{bookId}',
-      handler: deleteItemByIdHandler,
+        path: '/books/{bookId}',
+        handler: deleteBookByIdHandler,
     },
     {
-      method: '*',
-      path: '/{any*}',
-      handler: () => 'Halaman tidak ditemukan',
+        method: '*',
+        path: '/{any*}',
+        handler: () => 'Halaman tidak ditemukan',
     },
-  ];
+];
 
-  module.exports = routes;
+module.exports = routes;
